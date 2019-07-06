@@ -1,6 +1,6 @@
 # Repository Template
 
-![Apache-2.0 License](https://img.shields.io/github/license/htdvisser/template.svg?style=flat-square) ![GitHub stars](https://img.shields.io/github/stars/htdvisser/template.svg?logo=github&style=flat-square) ![GitHub forks](https://img.shields.io/github/forks/htdvisser/template.svg?logo=github&style=flat-square) ![GitHub release](https://img.shields.io/github/release/htdvisser/template.svg?logo=github&style=flat-square)
+[![Apache-2.0 License](https://img.shields.io/github/license/htdvisser/template.svg?style=flat-square)](https://github.com/htdvisser/template/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/htdvisser/template.svg?logo=github&style=flat-square)](https://github.com/htdvisser/template/stargazers) [![GitHub forks](https://img.shields.io/github/forks/htdvisser/template.svg?logo=github&style=flat-square)](https://github.com/htdvisser/template/network/members) [![GitHub release](https://img.shields.io/github/release/htdvisser/template.svg?logo=github&style=flat-square)](https://github.com/htdvisser/template/releases)
 
 > My Repository Template
 
