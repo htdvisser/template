@@ -1,0 +1,12 @@
+api:
+- api/*
+- api/**/*
+development:
+- .editorconfig
+- .github/*
+- .github/**/*
+- .gitignore
+documentation:
+- doc/*
+- doc/**/*
+- README.md
