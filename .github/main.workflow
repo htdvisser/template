@@ -14,3 +14,20 @@ action "Apply Pull Request labels" {
 	env = { LABEL_SPEC_FILE=".github/pull_request_labels.yml" }
 	secrets = ["GITHUB_TOKEN"]
 }
+
+workflow "Triage Issue" {
+	on = "issues"
+	resolves = ["Apply Issue labels", "Assign Issue to htdvisser"]
+}
+
+action "Apply Issue labels" {
+	uses = "actions/github@v1.0.0"
+	args = "label triage --action=opened"
+	secrets = ["GITHUB_TOKEN"]
+}
+
+action "Assign Issue to htdvisser" {
+	uses = "actions/github@v1.0.0"
+	args = "assign htdvisser --action=opened"
+	secrets = ["GITHUB_TOKEN"]
+}
