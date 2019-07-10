@@ -1,0 +1,25 @@
+title = "Repository Template"
+
+baseURL = "https://htdvisser.github.io/template/"
+
+disableKinds = [
+	"taxonomy",
+	"taxonomyTerm",
+	"RSS",
+	"sitemap",
+]
+
+enableEmoji = true
+enableGitInfo = true
+
+languageCode = "en-us"
+languageName = "English"
+
+[params]
+	description = "My Repository Template"
+	keywords = [
+		"open source",
+		"repository",
+	]
+	github_repo = "https://github.com/htdvisser/template"
+	github_repo_edit = "https://github.com/htdvisser/template/edit/master/doc/content"

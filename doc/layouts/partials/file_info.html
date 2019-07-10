@@ -1,0 +1,9 @@
+<p class="has-text-grey">
+	Last change on {{ .Lastmod.Format "2006-01-02" }}
+	{{ if .GitInfo -}}
+	<br> by {{ .GitInfo.AuthorName }}: {{ if .Site.Params.github_repo -}}
+		<a href="{{ .Site.Params.github_repo }}/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.Subject }}</a>
+	{{- else -}}
+		{{ .GitInfo.Subject }}
+	{{- end }}{{ end }}
+</p>

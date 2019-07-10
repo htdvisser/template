@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+{{- partial "head.html" . -}}
+
+<body>
+{{- partial "header.html" . -}}
+<main>
+<section class="section">
+	<div class="container">
+		<div class="columns is-desktop">
+			<div class="column">
+				{{- block "main" . }}{{ end }}
+			</div>
+			<div class="column is-full-tablet is-one-quarter-desktop">
+				{{- block "sidebar" . }}{{ end }}
+			</div>
+		</div>
+	</div>
+</section>
+</main>
+{{- partial "footer.html" . -}}
+</body>
+
+</html>

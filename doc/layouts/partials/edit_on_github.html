@@ -1,0 +1,3 @@
+{{ if and .File .Site.Params.github_repo_edit -}}
+<a href="{{ .Site.Params.github_repo_edit }}/{{ .File.Path }}">Edit {{ .File.Path }} on Github</a>
+{{- end }}

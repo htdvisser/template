@@ -1,0 +1,8 @@
+<aside class="panel">
+	<p class="panel-heading">{{ .CurrentSection.Title }}</p>
+	<a class="panel-block {{ if eq . .CurrentSection }} is-active{{ end }}" href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.LinkTitle }} Overview</a>
+	{{- $currentPage := . -}}
+	{{- range .CurrentSection.Pages }}
+	<a class="panel-block {{ if eq .Page $currentPage }} is-active{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+	{{- end }}
+</aside>

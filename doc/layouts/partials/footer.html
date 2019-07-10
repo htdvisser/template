@@ -1,0 +1,19 @@
+<footer class="footer">
+	<div class="container">
+		<div class="columns">
+			<div class="column">
+				{{ partial "copyright.html" . }}
+				{{ partial "file_info.html" . }}
+				{{ partial "edit_on_github.html" . }}
+			</div>
+			<nav class="column has-text-right" role="navigation" aria-label="footer navigation">
+				{{- $currentPage := . -}}
+				{{ range .Site.Menus.footer -}}
+				<p><a class="{{ if $currentPage.IsMenuCurrent "footer" . }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></p>
+				{{- end }}
+			</nav>
+		</div>
+	</div>
+</footer>
+
+<script src="{{ "js/script.js" | relURL }}"></script>

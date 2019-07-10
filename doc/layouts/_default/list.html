@@ -1,0 +1,12 @@
+{{ define "sidebar" }}
+{{ if .IsSection }}{{ partial "section_links.html" . }}{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<div class="content">
+{{ .Content }}
+</div>
+
+{{ if .CurrentSection }}{{ partial "first_in_section.html" . }}{{ end }}
+
+{{ end }}

@@ -1,0 +1,4 @@
+<div class="is-clearfix">
+{{ with .NextInSection }}<a class="button is-pulled-left" href="{{ .RelPermalink }}">⬅ {{ .LinkTitle }}</a>{{ end }}
+{{ with .PrevInSection }}<a class="button is-pulled-right" href="{{ .RelPermalink }}">{{ .LinkTitle }} ➡</a>{{ end }}
+</div>

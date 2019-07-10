@@ -1,0 +1,12 @@
+{{ define "sidebar" }}
+{{ if not .CurrentSection.IsHome }}{{ partial "section_links.html" . }}{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<div class="content">
+{{ .Content }}
+</div>
+
+{{ if .CurrentSection }}{{ partial "prev_next_in_section.html" . }}{{ end }}
+
+{{ end }}
