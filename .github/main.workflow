@@ -31,3 +31,19 @@ action "Assign Issue to htdvisser" {
 	args = "assign htdvisser --action=opened"
 	secrets = ["GITHUB_TOKEN"]
 }
+
+workflow "Build Master" {
+	on = "push"
+	resolves = ["Build Documentation"]
+}
+
+action "Filter branch master" {
+	uses = "actions/bin/filter@master"
+	args = "branch master"
+}
+
+action "Build Documentation" {
+	needs = "Filter branch master"
+	uses = "./.github/actions/hugo"
+	args = "-s doc"
+}
