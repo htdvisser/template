@@ -34,7 +34,7 @@ action "Assign Issue to htdvisser" {
 
 workflow "Build Master" {
 	on = "push"
-	resolves = ["Build Documentation"]
+	resolves = ["Update Github Pages"]
 }
 
 action "Filter branch master" {
@@ -46,4 +46,11 @@ action "Build Documentation" {
 	needs = "Filter branch master"
 	uses = "./.github/actions/hugo"
 	args = "-s doc"
+}
+
+action "Update Github Pages" {
+	needs = "Build Documentation"
+	uses = "./.github/actions/update-gh-pages"
+	args = "./doc/public"
+	secrets = ["DEPLOY_KEY"]
 }
